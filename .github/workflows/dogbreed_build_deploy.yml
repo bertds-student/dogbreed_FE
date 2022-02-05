@@ -10,7 +10,5 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: teststep
-        uses: actions/custom-github-action@v1.2 
-        with: 
-          who-to-greet: 'Mona the Octocat'
+      - name: Hello haitong World
+          uses: haitongz/actions-hello-world@v1.1.0
