@@ -11,4 +11,4 @@ jobs:
 
     steps:
       - name: Hello haitong World
-          uses: haitongz/actions-hello-world@v1.1.0
+        uses: haitongz/actions-hello-world@v1.1.0
