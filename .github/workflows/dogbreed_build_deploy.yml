@@ -1,0 +1,14 @@
+name: Create and publish a Docker image
+
+on:
+  push:
+    branches: ['main']
+
+jobs:
+  docker-build-and-push-frontend:
+
+    runs-on: ubuntu-latest
+    - name: teststep
+      uses: actions/custom-github-action@v1.2 
+      with: 
+        who-to-greet: 'Mona the Octocat'
