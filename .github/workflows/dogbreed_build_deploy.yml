@@ -19,11 +19,6 @@ jobs:
           registry: ghcr.io
           username: ${{ github.repository_owner }}
           password: ${{ secrets.IMAGE_PUBLISH }}
-          
-      - name: Docker Build and push
-        id: docker_build
-        uses: docker/build-push-action@v2
-        with:
-          context: .
-          push: true
-          tags: latest
+
+      - name: github-action-docker-build
+        uses: btmc/github-action-docker-build@0.1
