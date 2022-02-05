@@ -8,7 +8,9 @@ jobs:
   docker-build-and-push-frontend:
 
     runs-on: ubuntu-latest
-    - name: teststep
-      uses: actions/custom-github-action@v1.2 
-      with: 
-        who-to-greet: 'Mona the Octocat'
+
+    steps:
+      - name: teststep
+        uses: actions/custom-github-action@v1.2 
+        with: 
+          who-to-greet: 'Mona the Octocat'
