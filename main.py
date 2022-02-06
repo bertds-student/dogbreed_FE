@@ -10,7 +10,7 @@ st.set_option("deprecation.showfileUploaderEncoding", False)
 # defines an h1 header
 st.title("Hondenasiel.be - Hond zoekt nieuw baasje")
 st.text("Registreer hier je hond voor adoptie. Vul de velden in en laadt zeker een foto op. Op basis hiervan bepalen we oa het ras.")
-st.Header("Honden info :")
+st.header("Honden info :")
 naam_hond = st.text_input('Puk')
 st.write('Naam : ', naam_hond)
 leeftijd_hond = st.text_input('3,4')
