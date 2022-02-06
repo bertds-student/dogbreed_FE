@@ -9,12 +9,12 @@ st.set_option("deprecation.showfileUploaderEncoding", False)
 
 # defines an h1 header
 st.title("Hondenasiel.be - Hond zoekt nieuw baasje")
-image = Image.open(https://xxlfotobehang.nl/wp-content/uploads/2016/10/XXL-D-10.jpg)
-st.image(image, caption='Deze honden hebben een goede thuis gevonden.')
-
+st.text("Registreer hier je hond voor adoptie. Vul de velden in en laadt zeker een foto op. Op basis hiervan bepalen we oa het ras.")
 st.Header("Honden info :")
 naam_hond = st.text_input('Puk')
 st.write('Naam : ', naam_hond)
+leeftijd_hond = st.text_input('3,4')
+st.write('Leeftijd (jaren) : ', leeftijd_hond)
 
 
 # displays a file uploader widget
