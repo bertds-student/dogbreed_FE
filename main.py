@@ -14,9 +14,9 @@ st.title("Dogbreed detection web app")
 image = st.file_uploader("Choose an image")
 
 # displays a button
-if st.button("Style Transfer"):
+if st.button("Detect dogbreed"):
     if image is not None :
         files = {"file": image.getvalue()}
         st.image(image, width=500)
-        res = requests.post(f"http://backend:8080/{style}", files=files)
+        res = requests.post(f"http://backend:8080/upload/image", files=files)
         st.header(res)
