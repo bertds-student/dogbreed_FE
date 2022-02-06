@@ -18,5 +18,5 @@ if st.button("Detect dogbreed"):
     if image is not None :
         files = {"img": image.getvalue()}
         st.image(image, width=500)
-        res = requests.post(f"http://localhost:5000/upload/image", files=files)
+        res = requests.post(f"http://localhost:80/upload/image", files=files)
         st.header(res)
