@@ -8,14 +8,13 @@ from PIL import Image
 st.set_option("deprecation.showfileUploaderEncoding", False)
 
 # defines an h1 header
-st.title("Hondenasiel.be - Hond zoekt nieuw baasje")
+st.title("Hondenasiel.be")
+st.header("Hond zoekt nieuw baasje")
 st.text("Registreer hier je hond voor adoptie. Vul de velden in en laadt zeker een foto op. Op basis hiervan bepalen we oa het ras.")
-st.header("Honden info :")
-naam_hond = st.text_input('Puk')
+naam_hond = st.text_input('Naam : ')
 st.write('Naam : ', naam_hond)
-leeftijd_hond = st.text_input('3,4')
+leeftijd_hond = st.text_input('Leeftijd (jaren) : ')
 st.write('Leeftijd (jaren) : ', leeftijd_hond)
-
 
 # displays a file uploader widget
 image = st.file_uploader("Laad hier een foto van je hond op : ")
@@ -26,4 +25,6 @@ if st.button("Bepaal het ras obv de foto"):
         files = {"file": image.getvalue()}
         st.image(image, width=500)
         res = requests.post(f"http://localhost:8080/upload/image", files=files)
-        st.header(res)
+        st.text(res)
+
+st.button("Registreer je hond")
